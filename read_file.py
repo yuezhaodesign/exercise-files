@@ -1,23 +1,20 @@
-fhand = open('romeo-full.txt')
-count = 0
-count_r = 0
-count_j = 0
+### This Python script reads a .txt file, count things in the file, and output a new txt file
 
+# Read the txt file
+fhand = open('romeo-full.txt')
+
+# Define variables to count things
+count = 0 # count lines
+# more variables to count other things
+
+# Loop through each line to count things
 for line in fhand:
     count = count + 1
-    if line.startswith('ROMEO'):
-        count_r = count_r + 1
+    # more code to count things
 
-    if line.startswith('JULIET'):
-        count_j = count_j + 1
-
-
-print('Line Count:', count)
-print('ROMEO Count:', count_r)
-print('JULIET Count:', count_j)
-
+# Create an output.txt file
 fout = open('output.txt', 'w')
-fout.write(f'Line Count: {count}\n')
-fout.write(f'ROMEO Count: {count_r}\n')
-fout.write(f'JULIET Count: {count_j}')
+fout.write(count)
+
+# Close the file
 fout.close()
